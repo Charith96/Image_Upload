@@ -1,6 +1,15 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getStorage } from "@firebase/storage";
+import {
+  getFirestore,
+  collection,
+  doc,
+  query,
+  where,
+  onSnapshot,
+  getDocs,
+} from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -16,5 +25,16 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const storage = getStorage(app);
+const database = getFirestore(app);
 
-export { app, storage };
+export {
+  app,
+  storage,
+  database,
+  collection,
+  doc,
+  query,
+  where,
+  onSnapshot,
+  getDocs,
+};
